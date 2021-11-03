@@ -26,3 +26,71 @@ a:hover{
 i{
     padding: 0px 10px;
 }
+.s {
+    margin-bottom:200px;
+}
+footer {
+    background-color: white;
+}
+.piedepagina {
+    display: flex;
+    color:white;
+
+}
+.piedepagina .info{
+   width:50%;
+}
+@media (max-width: 1024px ) and (min-width: 992px) {
+    .logo {
+        display: none;
+        visibility: hidden;
+    }
+
+    .tg {
+        font-size: 15px;
+    }
+}
+@media (max-width: 991.98px) {
+    .tg {
+        display: none;
+        visibility: hidden;
+    }
+
+
+    .piedepagina {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .s {
+        margin-bottom: 10rem;
+    }
+
+    .piedepagina .info {
+        display: none;
+        visibility: hidden;
+    }
+
+    .piedepagina .redes {
+        max-width: 100%;
+        padding: 1rem;
+        justify-content: center;
+    }
+
+        .piedepagina .redes a img {
+            margin-left: 9px;
+            height: 30px;
+            width: 30px;
+        }
+}
+    .piedepagina .redes {
+        width: 50%;
+        padding: 1rem;
+        margin-left:15%;
+    }
+        .piedepagina .redes a img {
+            margin-left: 10px;
+        }
+    header nav .container{
+        color:white;
+    }

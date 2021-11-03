@@ -1,7 +1,11 @@
-.navbar-light .navbar-nav .nav-link{
-    color: var(--secondary-color);
+.nav-item {
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 1s ease 1s;
 }
-.navbar-light .navbar-nav .nav-link.active-link{
-    color: var(--primary-color);
-    text-decoration: underline;
+.nav-item:hover {
+    background-color: #D1E2F6;
+    -webkit-transform: scale(1.1);
+}
+.nav-item a:hover {
+    background-color: white;
 }
