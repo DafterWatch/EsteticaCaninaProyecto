@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './sharepage/footer/footer.component';
 import { NavbarComponent } from './sharepage/navbar/navbar.component';
+import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.component';
+import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
+import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import { NavbarComponent } from './sharepage/navbar/navbar.component';
     LoginComponent,
     RegistroComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    MenuClientesComponent,
+    MenuEmpleadosComponent,
+    MenuGerenteComponent
   ],
   imports: [
     BrowserModule,
