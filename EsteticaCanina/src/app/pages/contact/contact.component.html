@@ -1,1 +1,50 @@
-<p>contact works!</p>
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 class=" text-center" style="color:#5A5858;"><strong>Contacto</strong></h1><br />
+    <div>
+        <div id="map_canvas"></div>
+        <script type="text/javascript">
+            if (!!navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                        function (position) {
+                           var la=position.coords.latitude;
+                            var lo=position.coords.longitude;
+    var vMarker1
+    var map
+        map = new google.maps.Map(document.getElementById('map_canvas'), {
+            zoom: 13,
+            center: new google.maps.LatLng(la , lo),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        vMarker1 = new google.maps.Marker({
+            position: new google.maps.LatLng(la,lo),
+            title:"Tu Ubicacion",
+        });
+        vMarker1.setMap(map);
+        vMarker2 = new google.maps.Marker({
+            position: new google.maps.LatLng(-16.4973754, -68.1294755),
+            title:"Estetica Canina Pet Grommer",
+        });
+        vMarker2.setMap(map);
+
+                        },     
+                );  
+           }     
+        </script>
+    </div>
+    <div style="margin-left:1.5rem;"><br />
+        <p class="text-justify"  style="font-size: 17px; color: #5A5858;">
+            📍 Dirección: Yungas Esquina Saavedra # 555 <br />
+            📱 Teléfonos: 75273337/69849994<br />
+            ⏱️ Horarios de atención: <br />
+            Lunes a Viernes: 8:30 - 18:00<br />
+            Sábados: 9:00 - 18:00<br />
+            Domingos: 9.:00 - 16:00<br />
+        </p>
+    </div>
+</body>
