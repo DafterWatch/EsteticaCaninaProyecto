@@ -7,12 +7,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.component';
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
-import { MenuComponent } from './pages/menu/menu.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'menu',component:MenuComponent},
+  {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent},
