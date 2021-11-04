@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit {
         res=>{
           if(res){
             this.usuarioTipo = res
-            if(this.usuarioTipo.cargo=="cliente"){              
+            sessionStorage.setItem("idUsuario",this.usuarioTipo.idUsuario);
+            if(this.usuarioTipo.cargo=="cliente"){            
               this.router.navigate(['menuCliente']);          
             } else if(this.usuarioTipo.cargo=="empleado"){
               this.router.navigate(['menuEmpleado']);
