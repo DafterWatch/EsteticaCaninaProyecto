@@ -15,6 +15,11 @@
           </div>
           <br>
           <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="usuarioRegistro.telefono" name="celular">
+            <label for="floatingInput">Numero Celular</label>
+          </div>
+          <br>
+          <div class="form-floating">
             <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="usuarioRegistro.contra" name="contra">
             <label for="floatingPassword">Contraseña</label>
           </div>

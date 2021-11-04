@@ -22,7 +22,11 @@ export class RegistroComponent implements OnInit {
     contra: ''
   }
   registrarNuevoUsuario(){    
-    if(this.usuarioRegistro.nombreUsuario.length>0 && this.usuarioRegistro.contra.length>0 && this.reppass.length>0 && this.usuarioRegistro.correo.length>0){
+    if(this.usuarioRegistro.nombreUsuario.length>0 && 
+      this.usuarioRegistro.contra.length>0 && 
+      this.reppass.length>0 && 
+      this.usuarioRegistro.correo.length>0 &&
+      this.usuarioRegistro.telefono.length>0){
       if(this.usuarioRegistro.contra == this.reppass){
         this.usuarioService.addUsuarioRegistro(this.usuarioRegistro).subscribe();
         alert("Se ha registrado un nuevo usuario");
