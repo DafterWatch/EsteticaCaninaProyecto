@@ -1,41 +1,6 @@
-<div class="text-center">
-    <main class="form-signin">
-        <form>
-          <h1 class="">Registrar Mascota Nueva</h1>
-          <h4 class="h4 mb-3 fw-normal">Complete los campos vacios</h4>      
-          <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="nombre" [(ngModel)]="mascotaRegistro.nombreMascota" name="nombre">
-            <label for="floatingInput">Nombre Mascota</label>
-          </div>
-          <br>
-          <div class="form-floating">
-            <input type="number" class="form-control" id="floatingInput" placeholder="edad" [(ngModel)]="mascotaRegistro.edad" name="edad">
-            <label for="floatingInput">Edad - Años</label>
-          </div>
-          <br>
-          <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="sexo" [(ngModel)]="mascotaRegistro.sexo" name="sexo">
-            <label for="floatingInput">Sexo</label>
-          </div>
-          <br>
-          <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="raza" [(ngModel)]="mascotaRegistro.raza" name="raza">
-            <label for="floatingInput">Raza</label>
-          </div>
-          <br>
-          <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="especie" [(ngModel)]="mascotaRegistro.especie" name="especie">
-            <label for="floatingInput">Especie</label>
-          </div>
-          <br>
-          <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="registrarNuevaMascota()">Registrarse</button>
-        </form>
-      </main>
-</div>
-<br>
-<br>
 <div class="container">
     <h1>Lista de Mascotas</h1>
+    <button class="btn btn-lg btn-primary" (click)="registrarNuevaMascota()">Registrar Mascotas</button>
     <br>  
     <table class="table">
         <thead>

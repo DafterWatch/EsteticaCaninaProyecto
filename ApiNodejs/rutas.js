@@ -26,9 +26,9 @@ router.post('/addUsuario',(req, res)=>{
 });
 //agregar mascotas
 router.post('/addMascota',(req, res)=>{
-    const {nombreMascota, edad, sexo, raza, especie, idDuenio} = req.body
-    let sql = `insert into mascotas (nombreMascota, edad, sexo, raza, especie, idDuenio)
-                values('${nombreMascota}','${edad}','${sexo}','${raza}','${especie}','${idDuenio}')`
+    const {nombreMascota, edad, sexo, raza, especie, idDueno} = req.body
+    let sql = `insert into mascotas (nombreMascota, edad, sexo, raza, especie, idDueno)
+                values('${nombreMascota}','${edad}','${sexo}','${raza}','${especie}','${idDueno}')`
     conexion.query(sql, (err, rows, fields)=>{
         if(err) throw err
         else {
@@ -39,7 +39,7 @@ router.post('/addMascota',(req, res)=>{
 //get mascotas
 router.get('/getMascotas/:id',(req, res)=>{
     const {id} = req.params
-    let sql = 'select * from mascotas where idDuenio = ?'
+    let sql = 'select * from mascotas where idDueno = ?'
     conexion.query(sql,[id], (err, rows, fields)=>{
         if(err) throw err;
         else{

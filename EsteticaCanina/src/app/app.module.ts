@@ -16,6 +16,8 @@ import { NavbarComponent } from './sharepage/navbar/navbar.component';
 import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.component';
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
+import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
+import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu-registro-mascota.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.componen
     NavbarComponent,
     MenuClientesComponent,
     MenuEmpleadosComponent,
-    MenuGerenteComponent
+    MenuGerenteComponent,
+    MenuEsteticoComponent,
+    MenuRegistroMascotaComponent
   ],
   imports: [
     BrowserModule,

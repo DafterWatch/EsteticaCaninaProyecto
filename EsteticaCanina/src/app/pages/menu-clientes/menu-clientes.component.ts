@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UsuariosDetailsService, MascotaRegistro, MascotaLista } from 'src/app/services/usuarios-details.service';
+import { UsuariosDetailsService, MascotaLista } from 'src/app/services/usuarios-details.service';
 
 @Component({
   selector: 'app-menu-clientes',
@@ -17,27 +17,8 @@ export class MenuClientesComponent implements OnInit {
     this.listarMascotas();
   }
   reppass = '';
-  mascotaRegistro:MascotaRegistro = {
-    nombreMascota: '',
-    edad: 0,
-    sexo: '',
-    raza: '',
-    especie: '',
-    idDuenio: ''
-  }
   registrarNuevaMascota(){    
-    if(this.mascotaRegistro.nombreMascota.length>0 &&
-      this.mascotaRegistro.sexo.length>0 &&
-      this.mascotaRegistro.raza.length>0 &&
-      this.mascotaRegistro.especie.length>0)
-      {
-        this.mascotaRegistro.idDuenio = this.idUsuarioCliente;
-        this.usuarioService.addMascotaRegistro(this.mascotaRegistro).subscribe();
-        this.listarMascotas();
-        alert("Se ha registrado una nueva mascota");
-    } else {
-      alert("Porfavor complete los campos vacios");
-    }
+    this.router.navigate(['menuRegistroMascota']);
   }
   listarMascotas(){
     this.usuarioService.getMascotasLista(this.idUsuarioCliente).subscribe(

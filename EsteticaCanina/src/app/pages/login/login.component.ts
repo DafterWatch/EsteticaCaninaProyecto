@@ -31,24 +31,26 @@ export class LoginComponent implements OnInit {
           if(res){
             this.usuarioTipo = res
             sessionStorage.setItem("idUsuario",this.usuarioTipo.idUsuario);
-            if(this.usuarioTipo.cargo=="cliente"){            
+            console.log(res);
+            if(this.usuarioTipo.cargoId==1){            
               this.router.navigate(['menuCliente']);          
-            } else if(this.usuarioTipo.cargo=="empleado"){
-              this.router.navigate(['menuEmpleado']);
-            } else if(this.usuarioTipo.cargo=="gerente"){
+            } else if(this.usuarioTipo.cargoId==2){
+              this.router.navigate(['menuCajero']);
+            } else if(this.usuarioTipo.cargoId==3){
+              this.router.navigate(['menuEstetico']);
+            } else if(this.usuarioTipo.cargoId==4){
               this.router.navigate(['menuGerente']);
-            }           
+            }
           } else {
-            alert("Correo o contraseña incorrectos");          
+            alert("Correo o contraseña incorrectos");
           }
         },
         err=>{
-          console.log(err);        
+          console.log(err);
         }
       );
     } else{
       alert("Complete los campos vacios");
     }
   }
-
 }

@@ -6,7 +6,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.component';
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
+import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
+import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu-registro-mascota.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 
 const routes: Routes = [
@@ -17,8 +19,10 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registro',component:RegistroComponent},
   {path:'menuCliente',component:MenuClientesComponent},
-  {path:'menuEmpleado',component:MenuEmpleadosComponent},
+  {path:'menuCajero',component:MenuEmpleadosComponent},
+  {path:'menuEstetico',component:MenuEsteticoComponent},
   {path:'menuGerente',component:MenuGerenteComponent},
+  {path:'menuRegistroMascota',component:MenuRegistroMascotaComponent},
 ];
 
 @NgModule({

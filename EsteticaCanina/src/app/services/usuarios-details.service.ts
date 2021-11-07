@@ -47,7 +47,7 @@ export interface MascotaRegistro{
   sexo:string; 
   raza:string; 
   especie:string; 
-  idDuenio:string;
+  idDueno:string;
 }
 export interface MascotaLista{
   idMascota:number;
@@ -56,5 +56,5 @@ export interface MascotaLista{
   sexo:string; 
   raza:string; 
   especie:string; 
-  idDuenio:string;
+  idDueno:string;
 }
