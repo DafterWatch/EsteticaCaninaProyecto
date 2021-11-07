@@ -1,0 +1,23 @@
+<div class="container">    
+    <button class="btn btn-lg btn-primary" routerLink="/menuCliente">Volver</button>
+    <br>
+    <h1>Lista de servicios</h1>
+    <div class="list-group" style="max-width: 300px;" *ngFor="let serv of serviciosLista">
+        <a class="list-group-item list-group-item-action" style="cursor:pointer; margin-top: 5px;" (click)="servicioNombre=serv.nombre; servicioId=serv.idServicio">{{serv.nombre}}</a>
+    </div>
+    <br>
+    <div class="col-lg-6">
+        <form>
+            <h2>Fecha</h2>
+            <input type="date" class="form-control mt-2 mb-2" [(ngModel)]="fecha" name="fecha">
+            <br>
+            <h2>Hora</h2>
+            <input type="time" class="form-control" [(ngModel)]="hora" name="hora">
+            <br>
+            <p><span><b>Servicio:</b></span> {{servicioNombre}}</p>
+            <p><span><b>Fecha:</b></span> {{fecha}}</p>
+            <p><span><b>Hora:</b></span> {{hora}}</p>
+            <button class="btn btn-lg btn-primary" (click)="reservarConfirmado()">Reservar</button>
+        </form>
+    </div>
+</div>

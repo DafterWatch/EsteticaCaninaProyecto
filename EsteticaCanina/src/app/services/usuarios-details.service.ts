@@ -21,6 +21,18 @@ export class UsuariosDetailsService {
   getMascotasLista(id:string){
     return this.http.get(this.url+'/getMascotas/'+id);
   }
+  getReservasLista(id:string){
+    return this.http.get(this.url+'/getReservas/'+id);
+  }
+  getServiciosLista(id:string){
+    return this.http.get(this.url+'/getServicios/'+id);
+  }
+  addReserva(reserva:ReservaRegistro){
+    return this.http.post(this.url+'/addReserva',reserva);
+  }   
+  getValidarReserva(reserva:VerificarReserva){
+    return this.http.post(this.url+'/getValidarReserva',reserva);
+  }
 }
 export interface UsuarioLogin{
   correo:string;
@@ -57,4 +69,30 @@ export interface MascotaLista{
   raza:string; 
   especie:string; 
   idDueno:string;
+}
+export interface ReservasLista{
+  idReserva:string;
+  idUsuario:string;
+  nombreUsuario:string;
+  idMascota:string;
+  nombreMascota:string;
+  idServicio:string; 
+  nombre:string; 
+  fecha:string; 
+  hora:string;
+}
+export interface ServiciosLista{
+  idServicio:string;
+  nombre:string;
+}
+export interface ReservaRegistro{
+  idUsuario:string;
+  idMascota:string;
+  idServicio:string;
+  fecha:string;
+  hora:string;
+}
+export interface VerificarReserva{
+  idUsuario:string;
+  fecha:string;
 }

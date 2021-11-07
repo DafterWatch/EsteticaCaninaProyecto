@@ -1,6 +1,11 @@
 <div class="container">
     <h1>Lista de Mascotas</h1>
-    <button class="btn btn-lg btn-primary" (click)="registrarNuevaMascota()">Registrar Mascotas</button>
+    <br>
+    <div>
+      <button class="btn btn-lg btn-primary" style="display:flex;" (click)="registrarNuevaMascota()">Registrar Mascotas</button>
+      <br>
+      <button class="btn btn-lg btn-primary" style="display:flex;" routerLink="/menuReservaCliente">Ver Reservas</button>
+    </div>    
     <br>  
     <table class="table">
         <thead>
@@ -14,12 +19,12 @@
         </thead>
         <tbody>
           <tr *ngFor="let mascota of mascotasLista">
-            <th>{{mascota.nombreMascota}}</th>
+            <td>{{mascota.nombreMascota}}</td>
             <td>{{mascota.edad}}</td>
             <td>{{mascota.sexo}}</td>
             <td>{{mascota.raza}}</td>
             <td>{{mascota.especie}}</td>
-            <td><button class="btn btn-lg btn-primary">Reservar Cita</button></td>
+            <td><button class="btn btn-lg btn-primary" (click)="reservar(mascota.idMascota)">Reservar Cita</button></td>
           </tr>
         </tbody>
     </table>

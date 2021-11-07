@@ -30,4 +30,8 @@ export class MenuClientesComponent implements OnInit {
       }
     );
   }
+  reservar(idMas:any){
+    sessionStorage.setItem('idMascota',idMas);
+    this.router.navigate(['formuReserva']);
+  }
 }

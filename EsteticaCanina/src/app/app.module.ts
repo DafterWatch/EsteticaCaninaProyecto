@@ -18,6 +18,8 @@ import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.co
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
 import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
 import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu-registro-mascota.component';
+import { MenuReservaClienteComponent } from './pages/menu-reserva-cliente/menu-reserva-cliente.component';
+import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu
     MenuEmpleadosComponent,
     MenuGerenteComponent,
     MenuEsteticoComponent,
-    MenuRegistroMascotaComponent
+    MenuRegistroMascotaComponent,
+    MenuReservaClienteComponent,
+    FormularioReservaComponent
   ],
   imports: [
     BrowserModule,
