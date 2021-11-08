@@ -33,6 +33,12 @@ export class UsuariosDetailsService {
   getValidarReserva(reserva:VerificarReserva){
     return this.http.post(this.url+'/getValidarReserva',reserva);
   }
+  getProductosLista(id:string){
+    return this.http.get(this.url+'/getProductos/'+id);
+  }
+  editProducto(id:string, equipo:any){
+    return this.http.put(this.url+'/modificarProductos/'+id, equipo);
+  }
 }
 export interface UsuarioLogin{
   correo:string;
@@ -95,4 +101,10 @@ export interface ReservaRegistro{
 export interface VerificarReserva{
   idUsuario:string;
   fecha:string;
+}
+export interface ProductosLista{
+  idProducto:string;
+  nombreProducto:string;
+  cantidad:number;
+  precio:number;
 }

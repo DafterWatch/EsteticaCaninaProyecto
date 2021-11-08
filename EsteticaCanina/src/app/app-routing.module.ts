@@ -9,6 +9,7 @@ import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.compo
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
 import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
+import { MenuRegistrarEmpleadosComponent } from './pages/menu-registrar-empleados/menu-registrar-empleados.component';
 import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu-registro-mascota.component';
 import { MenuReservaClienteComponent } from './pages/menu-reserva-cliente/menu-reserva-cliente.component';
 import { RegistroComponent } from './pages/registro/registro.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'menuRegistroMascota',component:MenuRegistroMascotaComponent},
   {path:'menuReservaCliente',component:MenuReservaClienteComponent},
   {path:'formuReserva',component:FormularioReservaComponent},
+  {path:'menuRegistroEmpleado',component:MenuRegistrarEmpleadosComponent},
 ];
 
 @NgModule({

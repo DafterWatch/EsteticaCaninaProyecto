@@ -15,7 +15,7 @@ router.post('/getUsuariosLogin',(req, res)=>{
 //agregar usuarios
 router.post('/addUsuario',(req, res)=>{
     const {nombreUsuario, telefono, correo, cargo, contra} = req.body
-    let sql = `insert into usuarios(nombreUsuario, telefono, correo, cargo, contra) 
+    let sql = `insert into usuarios(nombreUsuario, telefono, correo, cargoId, contra) 
                 values('${nombreUsuario}','${telefono}','${correo}','${cargo}','${contra}')`
     conexion.query(sql, (err, rows, fields)=>{
         if(err) throw err
@@ -93,6 +93,28 @@ router.post('/getValidarReserva',(req, res)=>{
         if(err) throw err
         else {
             res.json(rows[0]);
+        }
+    })
+});
+// get productos
+router.get('/getProductos/',(req, res)=>{
+    let sql = `select * from productos`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows);
+        }
+    });
+});
+//modificar productos
+router.put('/modificarProductos/:id',(req, res)=>{
+    const {id}=req.params
+    const {cantidad} = req.body
+    let sql = `update productos set cantidad = ${cantidad} where idProducto = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'productos modificado'});
         }
     })
 });
