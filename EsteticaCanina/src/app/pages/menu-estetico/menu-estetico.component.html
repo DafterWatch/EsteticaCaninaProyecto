@@ -1,1 +1,24 @@
-<p>menu-estetico works!</p>
+<div class="container">
+    <h1>Lista de Todas las Reservas</h1>
+    <br> 
+    <table class="table">
+        <thead>
+          <tr style="color: blue;">
+            <th scope="col">Nombre Dueño</th>
+            <th scope="col">Nombre Mascota</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reserv of reservaLista">
+            <th>{{reserv.nombreUsuario}}</th>
+            <td>{{reserv.nombreMascota}}</td>
+            <td>{{reserv.nombre}}</td>
+            <td>{{reserv.fecha}}</td>
+            <td>{{reserv.hora}}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>

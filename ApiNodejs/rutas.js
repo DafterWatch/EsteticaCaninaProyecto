@@ -118,6 +118,60 @@ router.put('/modificarProductos/:id',(req, res)=>{
         }
     })
 });
+//get reservas all
+router.get('/getReservasAll/',(req, res)=>{
+    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre, r.fecha, r.hora from 
+	((reservas r inner join servicios s on r.idServicio = s.idServicio)
+    inner join usuarios u on r.idUsuario = u.idUsuario)
+    inner join mascotas m on r.idMascota = m.idMascota
+    order by r.fecha desc`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows);
+        }
+    });
+});
+//get reservas
+router.get('/getReservasHistorial/:id',(req, res)=>{
+    const {id} = req.params
+    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre, r.fecha, r.hora from 
+	((reservas r inner join servicios s on r.idServicio = s.idServicio)
+    inner join usuarios u on r.idUsuario = u.idUsuario)
+    inner join mascotas m on r.idMascota = m.idMascota
+    where r.idReserva = ?
+    order by r.fecha desc`
+    conexion.query(sql,[id], (err, rows, fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows[0]);
+        }
+    });
+});
+//agregar reserva
+router.post('/addServRealiz',(req, res)=>{
+    const {idServicio, fecha, idUsuario} = req.body
+    let sql = `insert into serviciosrealizados (idServicio, fecha, idUsuario)
+                values('${idServicio}','${fecha}','${idUsuario}')`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'reserva agregada'});
+        }
+    })
+});
+//agregar historial
+router.post('/addHistorial',(req, res)=>{
+    const {idUsuario, descripcion} = req.body
+    let sql = `insert into historial(idUsuario, descripcion, idServicioRealizado)
+                values('${idUsuario}','${descripcion}', (select count(*) from serviciosrealizados))`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'historial agregada'});
+        }
+    })
+});
 //--------------------
 
 module.exports = router;

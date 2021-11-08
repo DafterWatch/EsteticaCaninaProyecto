@@ -39,6 +39,18 @@ export class UsuariosDetailsService {
   editProducto(id:string, equipo:any){
     return this.http.put(this.url+'/modificarProductos/'+id, equipo);
   }
+  getReservasAllLista(id:string){
+    return this.http.get(this.url+'/getReservasAll/'+id);
+  }
+  getReservasHistorialLista(id:string){
+    return this.http.get(this.url+'/getReservasHistorial/'+id);
+  }
+  addServicioRealizado(reserva:ServicioRealizadoRegistro){
+    return this.http.post(this.url+'/addServRealiz',reserva);
+  }
+  addHistorial(reserva:HistorialRegistro){
+    return this.http.post(this.url+'/addHistorial',reserva);
+  }   
 }
 export interface UsuarioLogin{
   correo:string;
@@ -107,4 +119,13 @@ export interface ProductosLista{
   nombreProducto:string;
   cantidad:number;
   precio:number;
+}
+export interface ServicioRealizadoRegistro{
+  idServicio:string;
+  fecha:string;
+  idUsuario:string;
+}
+export interface HistorialRegistro{
+  idUsuario:string;
+  descripcion:string;
 }

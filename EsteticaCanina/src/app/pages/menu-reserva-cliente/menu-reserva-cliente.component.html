@@ -6,7 +6,8 @@
     <table class="table">
         <thead>
           <tr style="color: blue;">
-            <th scope="col">Nombre Dueño</th>
+            <th scope="col">Id Reserva</th>
+            <td scope="col">Nombre Dueño</td>
             <th scope="col">Nombre Mascota</th>
             <th scope="col">Servicio</th>
             <th scope="col">Fecha</th>
@@ -15,6 +16,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let reserv of reservaLista">
+            <th>{{reserv.idReserva}}</th>
             <th>{{reserv.nombreUsuario}}</th>
             <td>{{reserv.nombreMascota}}</td>
             <td>{{reserv.nombre}}</td>

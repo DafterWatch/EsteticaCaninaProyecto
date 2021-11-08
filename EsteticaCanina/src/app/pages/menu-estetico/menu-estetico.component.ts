@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ReservasLista, UsuariosDetailsService } from 'src/app/services/usuarios-details.service';
 
 @Component({
   selector: 'app-menu-estetico',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuEsteticoComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public router: Router, private usuarioService:UsuariosDetailsService) { }
+  idUsuarioCliente:any;
+  reservaLista:ReservasLista[] = [];
   ngOnInit(): void {
+    this.idUsuarioCliente = sessionStorage.getItem("idUsuario");
+    this.listarReservas();
   }
-
+  listarReservas(){
+    this.usuarioService.getReservasAllLista('').subscribe(
+      res => {
+        this.reservaLista=<any>res;
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
 }

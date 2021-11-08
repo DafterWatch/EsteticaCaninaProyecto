@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Buscar Reserva</h1>
+    <br>
+    <div class="mb-3 row">
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="idReser" name="idRes">
+        </div>
+        <br><br>
+        <div class="col-sm-10">
+            <button class="btn btn-lg btn-primary" style="max-width: 300px;" (click)="buscarReserva()">Buscar</button>
+        </div>        
+    </div> 
+    <br>
+    <div class="col-lg-6">
+        <form>
+            <p><span><b>Servicio:</b></span> {{reservaLista.nombre}}</p>
+            <p><span><b>Fecha:</b></span> {{reservaLista.fecha}}</p>
+            <p><span><b>Id Usuario:</b></span> {{reservaLista.idUsuario}}</p>
+            <p><span><b>Nombre Usuario:</b></span> {{reservaLista.nombreUsuario}}</p>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Escriba aqui" id="floatingTextarea2" style="height: 100px" [(ngModel)]="textoDescripcion" name="textDes"></textarea>
+                <label for="floatingTextarea2">Descripcion</label>
+            </div>
+            <br>
+            <button class="btn btn-lg btn-primary" (click)="registrarServicio()">Registrar Servicio Realizado</button>
+        </form>
+    </div>
+</div>
