@@ -1,0 +1,26 @@
+<div class="container">
+    <button class="btn btn-lg btn-primary" routerLink="/menuCliente">Volver al menu</button>
+    <br>
+    <table class="table">
+        <thead>
+          <tr style="color: blue;">
+            <th scope="col">Nombre Mascota</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Raza</th>
+            <th scope="col">Especie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mascota of mascotasLista">
+            <td>{{mascota.nombreMascota}}</td>
+            <td>{{mascota.edad}}</td>
+            <td>{{mascota.sexo}}</td>
+            <td>{{mascota.raza}}</td>
+            <td>{{mascota.especie}}</td>
+            <td><button class="btn btn-lg btn-primary" (click)="reservar(mascota.idMascota)">Reservar Cita</button></td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+

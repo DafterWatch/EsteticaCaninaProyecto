@@ -11,27 +11,15 @@ export class MenuClientesComponent implements OnInit {
 
   constructor(public router: Router, private usuarioService:UsuariosDetailsService) { }
   idUsuarioCliente:any;
-  mascotasLista:MascotaLista[] = [];
+
   ngOnInit(): void {
     this.idUsuarioCliente = sessionStorage.getItem("idUsuario");
-    this.listarMascotas();
+
   }
   reppass = '';
   registrarNuevaMascota(){    
     this.router.navigate(['menuRegistroMascota']);
   }
-  listarMascotas(){
-    this.usuarioService.getMascotasLista(this.idUsuarioCliente).subscribe(
-      res => {
-        this.mascotasLista=<any>res;
-      },
-      err => {
-        console.log(err);
-      }
-    );
-  }
-  reservar(idMas:any){
-    sessionStorage.setItem('idMascota',idMas);
-    this.router.navigate(['formuReserva']);
-  }
+
+
 }

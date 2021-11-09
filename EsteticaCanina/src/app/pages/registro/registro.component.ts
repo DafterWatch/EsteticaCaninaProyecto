@@ -18,7 +18,7 @@ export class RegistroComponent implements OnInit {
     nombreUsuario: '',
     telefono: '',
     correo: '',
-    cargo: 'cliente',
+    cargo: '1',
     contra: ''
   }
   registrarNuevoUsuario(){    

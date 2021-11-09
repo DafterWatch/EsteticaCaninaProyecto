@@ -21,6 +21,7 @@ import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu
 import { MenuReservaClienteComponent } from './pages/menu-reserva-cliente/menu-reserva-cliente.component';
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
 import { MenuRegistrarEmpleadosComponent } from './pages/menu-registrar-empleados/menu-registrar-empleados.component';
+import { MenuListaMascotasComponent } from './pages/menu-lista-mascotas/menu-lista-mascotas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { MenuRegistrarEmpleadosComponent } from './pages/menu-registrar-empleado
     MenuRegistroMascotaComponent,
     MenuReservaClienteComponent,
     FormularioReservaComponent,
-    MenuRegistrarEmpleadosComponent
+    MenuRegistrarEmpleadosComponent,
+    MenuListaMascotasComponent
   ],
   imports: [
     BrowserModule,

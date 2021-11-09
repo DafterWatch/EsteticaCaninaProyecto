@@ -10,6 +10,12 @@
             <label for="floatingInput">Nombre</label>
           </div>
           <br>
+          <select class="form-select" [(ngModel)]="usuarioRegistro.cargo" name="cargo">
+            <option selected>Seleccionar Cargo</option>
+            <option value="3">Estetica Empleado</option>
+            <option value="2">Cajero</option>
+          </select>
+          <br>
           <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="usuarioRegistro.correo" name="correo">
             <label for="floatingInput">Correo Electronico</label>
