@@ -30,26 +30,28 @@ export class MenuRegistroMascotaComponent implements OnInit {
   mascotaRegistro:MascotaRegistro = {
     nombreMascota: '',
     edad: 0,
-    sexo: '',
+    sexo: 'Seleccionar Sexo',
     raza: '',
-    especie: '',
+    especie: 'Seleccionar especie',
     idDueno: ''
   }
 
   registrarNuevaMascota(){    
     if(this.mascotaRegistro.nombreMascota.length>0 &&
-      this.mascotaRegistro.sexo.length>0 &&
       this.mascotaRegistro.raza.length>0 &&
       this.mascotaRegistro.especie.length>0)
       {
         this.mascotaRegistro.idDueno = this.idUsuarioCliente;
         console.log(this.mascotaRegistro);
-        //Activar servicio
-        this.usuarioService.addMascotaRegistro(this.mascotaRegistro).subscribe();
-
-
-        alert("Se ha registrado una nueva mascota");
-        this.router.navigate(['menuCliente']);
+        if(this.mascotaRegistro.sexo=="Hembra" ||this.mascotaRegistro.sexo=="Macho" || this.mascotaRegistro.especie=="Canina"|| this.mascotaRegistro.especie=="Felina"){
+      //Activar servicio
+      this.usuarioService.addMascotaRegistro(this.mascotaRegistro).subscribe();
+      alert("Se ha registrado una nueva mascota");
+      this.router.navigate(['menuCliente']);
+        }else {        
+          alert("Debe Seleccionar un sexo y especie");
+        }
+  
     } else {
       alert("Porfavor complete los campos vacios");
     }

@@ -15,19 +15,28 @@
             <label for="floatingInput">Edad - Años</label>
           </div>
           <br>
+
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="sexo" [(ngModel)]="mascotaRegistro.sexo" name="sexo">
-            <label for="floatingInput">Sexo</label>
+            <select class="form-select" [(ngModel)]="mascotaRegistro.sexo" name="sexo">
+              <option selected>Seleccionar Sexo</option>
+              <option value="Hembra">Hembra</option>
+              <option value="Macho">Macho</option>
+            </select>
           </div>
           <br>
+
           <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput" placeholder="raza" [(ngModel)]="mascotaRegistro.raza" name="raza">
             <label for="floatingInput">Raza</label>
           </div>
           <br>
+
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="especie" [(ngModel)]="mascotaRegistro.especie" name="especie">
-            <label for="floatingInput">Especie</label>
+            <select class="form-select" [(ngModel)]="mascotaRegistro.especie" name="especie">
+              <option selected>Seleccionar especie</option>
+              <option value="Canina">Canina</option>
+              <option value="Felina">Felina</option>
+            </select>
           </div>
           <br>
           <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="registrarNuevaMascota()">Registrarse</button>

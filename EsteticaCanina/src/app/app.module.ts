@@ -22,6 +22,7 @@ import { MenuReservaClienteComponent } from './pages/menu-reserva-cliente/menu-r
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
 import { MenuRegistrarEmpleadosComponent } from './pages/menu-registrar-empleados/menu-registrar-empleados.component';
 import { MenuListaMascotasComponent } from './pages/menu-lista-mascotas/menu-lista-mascotas.component';
+import { MenuListaProductosComponent } from './pages/menu-lista-productos/menu-lista-productos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { MenuListaMascotasComponent } from './pages/menu-lista-mascotas/menu-lis
     MenuReservaClienteComponent,
     FormularioReservaComponent,
     MenuRegistrarEmpleadosComponent,
-    MenuListaMascotasComponent
+    MenuListaMascotasComponent,
+    MenuListaProductosComponent
   ],
   imports: [
     BrowserModule,
