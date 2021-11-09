@@ -1,30 +1,6 @@
 <div class="container">
   <button class="btn btn-lg btn-primary" style="display:flex;" routerLink="/menuRegistroEmpleado">Registrar Nuevo Empleado</button>
     <br>
-  <h1>Lista de Productos</h1>
-  <br>
-  <div>    
-    <h3>Cantidad de productos</h3>
+    <button class="btn btn-lg btn-primary" style="display:flex;" routerLink="/menuModificarProductos">Modificar Productos</button>
     <br>
-    <input [(ngModel)]="cantidadNueva" type="number" class="form-control" style="max-width: 100px;" name="cantiN">
-  </div>    
-  <br>  
-  <table class="table">
-      <thead>
-        <tr style="color: blue;">
-          <th scope="col">Producto</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let prod of productosLista">
-          <td>{{prod.nombreProducto}}</td>
-          <td>{{prod.cantidad}}</td>
-          <td>{{prod.precio}}</td>
-          <td><button class="btn btn-lg btn-primary" (click)="aumentarStock(prod.idProducto, prod.cantidad);">Aumentar stock</button></td>
-          <td><button class="btn btn-lg btn-primary" (click)="reducirStock(prod.idProducto, prod.cantidad);">Reducir stock</button></td>
-        </tr>
-      </tbody>
-  </table>
 </div>
