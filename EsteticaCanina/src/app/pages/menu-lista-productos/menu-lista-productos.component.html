@@ -1,5 +1,10 @@
 <div class="container">
     <button class="btn btn-lg btn-primary" routerLink="/menuGerente">Volver</button>
+    <br>
+    <br>
+    <button class="btn btn-lg btn-primary" routerLink="/menuAddProducto">Añadir Nuevo Producto</button>
+    <br>
+    <br>
     <h1>Lista de Productos</h1>
     <br>
     <div>    
@@ -23,6 +28,7 @@
             <td>{{prod.precio}}</td>
             <td><button class="btn btn-lg btn-primary" (click)="aumentarStock(prod.idProducto, prod.cantidad);">Aumentar stock</button></td>
             <td><button class="btn btn-lg btn-primary" (click)="reducirStock(prod.idProducto, prod.cantidad);">Reducir stock</button></td>
+            <td><button class="btn btn-lg btn-primary" (click)="reducirStock(prod.idProducto, prod.cantidad);">Eliminar Producto</button></td>
           </tr>
         </tbody>
     </table>

@@ -51,6 +51,9 @@ export class UsuariosDetailsService {
   addHistorial(reserva:HistorialRegistro){
     return this.http.post(this.url+'/addHistorial',reserva);
   }   
+  addProducto(producto:ProductoRegistro){
+    return this.http.post(this.url+'/addProducto',producto);
+  }
 }
 export interface UsuarioLogin{
   correo:string;
@@ -128,4 +131,9 @@ export interface ServicioRealizadoRegistro{
 export interface HistorialRegistro{
   idUsuario:string;
   descripcion:string;
+}
+export interface ProductoRegistro{
+  nombreProducto: string;
+  cantidad: number;
+  precio: number;
 }

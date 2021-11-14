@@ -1,0 +1,26 @@
+<div class="container">    
+    <button class="btn btn-lg btn-primary" routerLink="/menuCliente">Volver Lista Mascota</button>
+    <br>
+    <main class="form-signin">      
+        <form>
+          <h1 class="">Registrar Nuevo Producto</h1>          
+          <h4 class="h4 mb-3 fw-normal">Complete los campos vacios</h4>      
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="nombre" [(ngModel)]="productoRegistro.nombreProducto" name="nombre">
+            <label for="floatingInput">Nombre Producto</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="number" class="form-control" id="floatingInput" placeholder="cantidad" [(ngModel)]="productoRegistro.cantidad" name="edad">
+            <label for="floatingInput">Cantidad</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="number" class="form-control" id="floatingInput" placeholder="precio" [(ngModel)]="productoRegistro.precio" name="edad">
+            <label for="floatingInput">Precio</label>
+          </div>
+          <br>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="registrarNuevoProducto()">Registrar</button>
+        </form>
+      </main>
+</div>

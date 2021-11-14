@@ -172,6 +172,18 @@ router.post('/addHistorial',(req, res)=>{
         }
     })
 });
+//agregar producto
+router.post('/addProducto',(req, res)=>{
+    const {nombreProducto, cantidad, precio} = req.body
+    let sql = `insert into productos(nombreProducto, cantidad, precio)
+                values('${nombreProducto}','${cantidad}', '${precio}')`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'producto agregado'});
+        }
+    })
+});
 //--------------------
 
 module.exports = router;

@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { MenuAddProductoComponent } from './pages/menu-add-producto/menu-add-producto.component';
 import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.component';
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
 import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
@@ -32,7 +33,8 @@ const routes: Routes = [
   {path:'formuReserva',component:FormularioReservaComponent},
   {path:'menuRegistroEmpleado',component:MenuRegistrarEmpleadosComponent},
   {path:'menulistaMascotas',component:MenuListaMascotasComponent},
-  {path:'menuModificarProductos',component:MenuListaProductosComponent}
+  {path:'menuModificarProductos',component:MenuListaProductosComponent},
+  {path:'menuAddProducto',component:MenuAddProductoComponent},
 ];
 
 @NgModule({
