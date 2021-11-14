@@ -184,6 +184,17 @@ router.post('/addProducto',(req, res)=>{
         }
     })
 });
+//eliminar equipo
+router.delete('/deleteProducto/:id',(req, res)=>{
+    const {id}=req.params
+    let sql = `delete from productos where idProducto = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'producto eliminado'});
+        }
+    })
+});
 //--------------------
 
 module.exports = router;

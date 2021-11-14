@@ -54,6 +54,9 @@ export class UsuariosDetailsService {
   addProducto(producto:ProductoRegistro){
     return this.http.post(this.url+'/addProducto',producto);
   }
+  deleteProducto(id:string){
+    return this.http.delete(this.url+'/deleteProducto/'+id);
+  }
 }
 export interface UsuarioLogin{
   correo:string;

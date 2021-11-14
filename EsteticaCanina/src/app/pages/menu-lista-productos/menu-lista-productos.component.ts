@@ -70,4 +70,15 @@ export class MenuListaProductosComponent implements OnInit {
       }
     );
   }
+  eliminar(idProd:any){
+    this.usuarioService.deleteProducto(idProd).subscribe(
+      res=>{
+        console.log("Equipo eliminado");
+        this.listarProductos();
+      },
+      err=>{
+        console.log(err);        
+      }
+    );
+  }
 }
