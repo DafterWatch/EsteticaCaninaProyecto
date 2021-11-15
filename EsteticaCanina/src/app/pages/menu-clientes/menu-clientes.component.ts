@@ -11,10 +11,10 @@ export class MenuClientesComponent implements OnInit {
 
   constructor(public router: Router, private usuarioService:UsuariosDetailsService) { }
   idUsuarioCliente:any;
-
+  nombreUsuario:any;
   ngOnInit(): void {
     this.idUsuarioCliente = sessionStorage.getItem("idUsuario");
-
+    this.nombreUsuario = sessionStorage.getItem("nombreUsuario");
   }
   reppass = '';
   registrarNuevaMascota(){    

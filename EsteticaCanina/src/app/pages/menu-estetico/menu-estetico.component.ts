@@ -11,9 +11,11 @@ export class MenuEsteticoComponent implements OnInit {
 
   constructor(public router: Router, private usuarioService:UsuariosDetailsService) { }
   idUsuarioCliente:any;
+  nombreUsuario:any;
   reservaLista:ReservasLista[] = [];
   ngOnInit(): void {
     this.idUsuarioCliente = sessionStorage.getItem("idUsuario");
+    this.nombreUsuario = sessionStorage.getItem("nombreUsuario");
     this.listarReservas();
   }
   listarReservas(){

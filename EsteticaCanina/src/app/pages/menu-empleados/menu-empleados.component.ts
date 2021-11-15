@@ -12,6 +12,7 @@ export class MenuEmpleadosComponent implements OnInit {
 
   constructor(public router: Router, private usuarioService:UsuariosDetailsService) { }
   idUsuarioCliente:any;
+  nombreUsuario:any;
   reservaLista:ReservasLista = {
     idReserva: '',
     idUsuario: '',
@@ -26,6 +27,7 @@ export class MenuEmpleadosComponent implements OnInit {
   reservaListaAll:ReservasLista[] = [];
   ngOnInit(): void {
     this.idUsuarioCliente = sessionStorage.getItem("idUsuario");
+    this.nombreUsuario = sessionStorage.getItem("nombreUsuario");
   }
   idReser:any = '';
   textoDescripcion:any = '';

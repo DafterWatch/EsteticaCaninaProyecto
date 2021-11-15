@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
           if(res){
             this.usuarioTipo = res
             sessionStorage.setItem("idUsuario",this.usuarioTipo.idUsuario);
+            sessionStorage.setItem("nombreUsuario",this.usuarioTipo.nombreUsuario);
             this.loginControl.disparador.emit({
               data:"si"
             });

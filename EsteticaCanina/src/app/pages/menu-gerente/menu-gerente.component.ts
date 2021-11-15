@@ -11,11 +11,13 @@ export class MenuGerenteComponent implements OnInit {
 
   constructor(public router: Router, private usuarioService:UsuariosDetailsService) { }
   idUsuarioCliente:any;
+  nombreUsuario:any;
   idMascotaCliente:any;
   productosLista:ProductosLista[] = [];
   cantidadNueva:any = 0;
   ngOnInit(): void {
     this.idUsuarioCliente = sessionStorage.getItem("idUsuario");
+    this.nombreUsuario = sessionStorage.getItem("nombreUsuario");
     this.listarProductos();
   }
   listarProductos(){
