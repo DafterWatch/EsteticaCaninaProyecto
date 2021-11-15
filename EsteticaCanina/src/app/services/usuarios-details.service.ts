@@ -57,6 +57,18 @@ export class UsuariosDetailsService {
   deleteProducto(id:string){
     return this.http.delete(this.url+'/deleteProducto/'+id);
   }
+  getEmpleadosLista(id:string){
+    return this.http.get(this.url+'/getEmpleados/'+id);
+  }
+  deleteEmpleado(id:string){
+    return this.http.delete(this.url+'/deleteEmpleado/'+id);
+  }
+  getUnEmpleadosLista(id:string){
+    return this.http.get(this.url+'/getUnEmpleado/'+id);
+  }
+  editEmpleado(id:string, equipo:EmpleadosUpdate){
+    return this.http.put(this.url+'/modificarEmpleado/'+id, equipo);
+  }
 }
 export interface UsuarioLogin{
   correo:string;
@@ -139,4 +151,20 @@ export interface ProductoRegistro{
   nombreProducto: string;
   cantidad: number;
   precio: number;
+}
+export interface EmpleadosLista{
+  idUsuario: string;
+  nombreUsuario: string;
+  telefono: string;
+  correo: string;
+  contra: string;
+  idCargo: string;
+  nombre: string;
+}
+export interface EmpleadosUpdate{
+  nombreUsuario: string;
+  telefono : string;
+  correo : string;
+  cargoId : string;
+  contra: string;
 }

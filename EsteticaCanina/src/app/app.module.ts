@@ -24,6 +24,8 @@ import { MenuRegistrarEmpleadosComponent } from './pages/menu-registrar-empleado
 import { MenuListaMascotasComponent } from './pages/menu-lista-mascotas/menu-lista-mascotas.component';
 import { MenuListaProductosComponent } from './pages/menu-lista-productos/menu-lista-productos.component';
 import { MenuAddProductoComponent } from './pages/menu-add-producto/menu-add-producto.component';
+import { MenuListaEmpleadosComponent } from './pages/menu-lista-empleados/menu-lista-empleados.component';
+import { MenuModificarEmpleadoComponent } from './pages/menu-modificar-empleado/menu-modificar-empleado.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +47,9 @@ import { MenuAddProductoComponent } from './pages/menu-add-producto/menu-add-pro
     MenuRegistrarEmpleadosComponent,
     MenuListaMascotasComponent,
     MenuListaProductosComponent,
-    MenuAddProductoComponent
+    MenuAddProductoComponent,
+    MenuListaEmpleadosComponent,
+    MenuModificarEmpleadoComponent
   ],
   imports: [
     BrowserModule,

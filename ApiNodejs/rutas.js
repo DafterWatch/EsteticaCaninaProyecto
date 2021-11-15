@@ -195,6 +195,60 @@ router.delete('/deleteProducto/:id',(req, res)=>{
         }
     })
 });
+// get Empleados
+router.get('/getEmpleados/',(req, res)=>{
+    let sql = `select u.idUsuario, u.nombreUsuario, u.telefono, u.correo, u.contra, c.idCargo, c.nombre from 
+    usuarios u inner join cargos c on u.cargoId = c.idCargo
+    where cargoId = 2 or cargoId = 3`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows);
+        }
+    });
+});
+//delete Empleado
+router.delete('/deleteEmpleado/:id',(req, res)=>{
+    const {id}=req.params
+    let sql = `delete from usuarios where idUsuario = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'empleado eliminado'});
+        }
+    })
+});
+//buscar 1 Empleado
+router.get('/getUnEmpleado/:id',(req, res)=>{
+    const {id}=req.params
+    let sql = `select u.idUsuario, u.nombreUsuario, u.telefono, u.correo, u.contra, c.idCargo, c.nombre from 
+    usuarios u inner join cargos c on u.cargoId = c.idCargo
+    where idUsuario = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json(rows[0]);
+        }
+    })
+});
+//modificar empleado
+router.put('/modificarEmpleado/:id',(req, res)=>{
+    const {id}=req.params
+    const {nombreUsuario, telefono, correo, cargoId, contra} = req.body
+    let sql = `update usuarios 
+    set nombreUsuario = '${nombreUsuario}',
+    telefono = '${telefono}',
+    correo = '${correo}',
+    cargoId = '${cargoId}',
+    contra = '${contra}'
+    where idUsuario = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'productos modificado'});
+        }
+    })
+});
 //--------------------
 
 module.exports = router;

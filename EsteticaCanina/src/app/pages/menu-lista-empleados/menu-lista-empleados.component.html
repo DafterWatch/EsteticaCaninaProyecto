@@ -1,0 +1,29 @@
+<div class="container">
+    <button class="btn btn-lg btn-primary" routerLink="/menuGerente">Volver</button>
+    <br>
+    <br>
+    <button class="btn btn-lg btn-primary" style="display:flex;" routerLink="/menuRegistroEmpleado">Registrar Nuevo Empleado</button>    
+    <br>
+    <h1>Lista de Empleados</h1>   
+    <br>  
+    <table class="table">
+        <thead>
+          <tr style="color: blue;">
+            <th scope="col">Nombre Empleado</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Cargo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of empleadosLista">
+            <td>{{emp.nombreUsuario}}</td>
+            <td>{{emp.telefono}}</td>
+            <td>{{emp.correo}}</td>
+            <td>{{emp.nombre}}</td>
+            <td><button class="btn btn-lg btn-primary" (click)="modificar(emp.idUsuario);">Modificar</button></td>
+            <td><button class="btn btn-lg btn-primary" (click)="eliminar(emp.idUsuario);">Eliminar</button></td>
+          </tr>
+        </tbody>
+    </table>
+</div>

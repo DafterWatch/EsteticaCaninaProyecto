@@ -10,8 +10,10 @@ import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.compo
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
 import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
+import { MenuListaEmpleadosComponent } from './pages/menu-lista-empleados/menu-lista-empleados.component';
 import { MenuListaMascotasComponent } from './pages/menu-lista-mascotas/menu-lista-mascotas.component';
 import { MenuListaProductosComponent } from './pages/menu-lista-productos/menu-lista-productos.component';
+import { MenuModificarEmpleadoComponent } from './pages/menu-modificar-empleado/menu-modificar-empleado.component';
 import { MenuRegistrarEmpleadosComponent } from './pages/menu-registrar-empleados/menu-registrar-empleados.component';
 import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu-registro-mascota.component';
 import { MenuReservaClienteComponent } from './pages/menu-reserva-cliente/menu-reserva-cliente.component';
@@ -35,6 +37,8 @@ const routes: Routes = [
   {path:'menulistaMascotas',component:MenuListaMascotasComponent},
   {path:'menuModificarProductos',component:MenuListaProductosComponent},
   {path:'menuAddProducto',component:MenuAddProductoComponent},
+  {path:'menuListaEmpleados',component:MenuListaEmpleadosComponent},
+  {path:'menuUpdateEmpleado',component:MenuModificarEmpleadoComponent},
 ];
 
 @NgModule({

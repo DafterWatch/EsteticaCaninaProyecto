@@ -35,7 +35,7 @@ export class MenuRegistrarEmpleadosComponent implements OnInit {
           {           
             this.usuarioService.addUsuarioRegistro(this.usuarioRegistro).subscribe();
             alert("Se ha registrado un nuevo empleado estetico");
-            this.router.navigate(['/menuGerente']);
+            this.router.navigate(['/menuListaEmpleados']);
           } else {        
             alert("Debe Seleccionar un cargo");
           }
