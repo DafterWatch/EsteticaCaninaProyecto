@@ -3,7 +3,9 @@
     <br>
     <h1>Lista de servicios</h1>
     <div class="list-group" style="max-width: 300px;" *ngFor="let serv of serviciosLista">
-        <a class="list-group-item list-group-item-action" style="cursor:pointer; margin-top: 5px;" (click)="servicioNombre=serv.nombre; servicioId=serv.idServicio">{{serv.nombre}}</a>
+        <a class="list-group-item list-group-item-action" 
+        style="cursor:pointer; margin-top: 5px;" (click)="servicioNombre=serv.nombre; servicioId=serv.idServicio">
+        {{serv.nombre + " - "+serv.precio+"bs"}}</a>
     </div>
     <br>
     <div class="col-lg-6">

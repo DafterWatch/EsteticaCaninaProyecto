@@ -120,6 +120,7 @@ export interface ReservasLista{
 export interface ServiciosLista{
   idServicio:string;
   nombre:string;
+  precio: string;
 }
 export interface ReservaRegistro{
   idUsuario:string;
@@ -129,8 +130,8 @@ export interface ReservaRegistro{
   hora:string;
 }
 export interface VerificarReserva{
-  idUsuario:string;
   fecha:string;
+  hora: string;
 }
 export interface ProductosLista{
   idProducto:string;

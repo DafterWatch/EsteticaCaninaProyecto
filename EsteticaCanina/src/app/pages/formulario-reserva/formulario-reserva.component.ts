@@ -56,12 +56,12 @@ export class FormularioReservaComponent implements OnInit {
     hora: ''
   }
   verifReserva:VerificarReserva = {
-    idUsuario: '',
-    fecha: ''
+    fecha: '',
+    hora: ''
   }
   verificarReservaNueva(){
-    this.verifReserva.idUsuario = this.idUsuarioCliente;
     this.verifReserva.fecha = this.fecha;
+    this.verifReserva.hora = this.hora;
     this.usuarioService.getValidarReserva(this.verifReserva).subscribe(
       res => {
       if(res){

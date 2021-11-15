@@ -87,8 +87,8 @@ router.post('/addReserva',(req, res)=>{
 });
 //get validar reserva
 router.post('/getValidarReserva',(req, res)=>{
-    const {idUsuario, fecha} = req.body
-    let sql = `select * from reservas where idUsuario = '${idUsuario}' and fecha = '${fecha}'`
+    const {fecha, hora} = req.body
+    let sql = `select * from reservas where fecha = '${fecha}' and hora = '${hora}'`
     conexion.query(sql, (err, rows, fields)=>{
         if(err) throw err
         else {
