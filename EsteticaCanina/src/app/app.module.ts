@@ -29,6 +29,7 @@ import { MenuModificarEmpleadoComponent } from './pages/menu-modificar-empleado/
 import { MenuUpdateReservaComponent } from './pages/menu-update-reserva/menu-update-reserva.component';
 import { GerenteListaReservasComponent } from './pages/gerente-lista-reservas/gerente-lista-reservas.component';
 import { GerenteUpdateReservaComponent } from './pages/gerente-update-reserva/gerente-update-reserva.component';
+import { MenuListaServiciosRealizadosComponent } from './pages/menu-lista-servicios-realizados/menu-lista-servicios-realizados.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { GerenteUpdateReservaComponent } from './pages/gerente-update-reserva/ge
     MenuModificarEmpleadoComponent,
     MenuUpdateReservaComponent,
     GerenteListaReservasComponent,
-    GerenteUpdateReservaComponent
+    GerenteUpdateReservaComponent,
+    MenuListaServiciosRealizadosComponent
   ],
   imports: [
     BrowserModule,

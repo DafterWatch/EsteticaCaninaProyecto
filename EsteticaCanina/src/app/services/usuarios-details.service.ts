@@ -78,6 +78,9 @@ export class UsuariosDetailsService {
   editReserva(id:string, equipo:ReservaRegistro){
     return this.http.put(this.url+'/modificarReserva/'+id, equipo);
   }
+  getServiciosRealizados(id:string){
+    return this.http.get(this.url+'/getServiciosRealizados/'+id);
+  }
 }
 export interface UsuarioLogin{
   correo:string;
@@ -177,4 +180,14 @@ export interface EmpleadosUpdate{
   correo : string;
   cargoId : string;
   contra: string;
+}
+export interface ServiciosRealizadosLista{
+  idServicioRealizado: string;
+  idServicio: string;
+  nombre: string;
+  fecha: string;
+  idUsuario: string;
+  nombreUsuario: string;
+  idHistorial: string;
+  descripcion: string;
 }

@@ -1,0 +1,27 @@
+<div class="container">
+    <button class="btn btn-lg btn-primary" routerLink="/menuGerente">Volver</button>
+    <br>
+    <h1>Bienvenido <span style="color: blue;">{{nombreUsuario}}</span></h1>
+    <h1>Lista de Todas los Servicios Realizados</h1>
+    <br> 
+    <table class="table">
+        <thead>
+          <tr style="color: blue;">
+            <th scope="col">Id</th>
+            <th scope="col">Nombre Servicio</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Nombre Usuario</th>
+            <th scope="col">Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let serv of serviciosRealizadosLista">
+            <th>{{serv.idServicioRealizado}}</th>
+            <td>{{serv.nombre}}</td>
+            <td>{{serv.fecha}}</td>
+            <td>{{serv.nombreUsuario}}</td>
+            <td>{{serv.descripcion}}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
