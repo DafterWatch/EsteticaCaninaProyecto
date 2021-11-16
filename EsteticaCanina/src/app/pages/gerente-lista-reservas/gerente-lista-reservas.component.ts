@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ReservasLista, UsuariosDetailsService } from 'src/app/services/usuarios-details.service';
 
 @Component({
-  selector: 'app-menu-estetico',
-  templateUrl: './menu-estetico.component.html',
-  styleUrls: ['./menu-estetico.component.scss']
+  selector: 'app-gerente-lista-reservas',
+  templateUrl: './gerente-lista-reservas.component.html',
+  styleUrls: ['./gerente-lista-reservas.component.scss']
 })
-export class MenuEsteticoComponent implements OnInit {
+export class GerenteListaReservasComponent implements OnInit {
 
   constructor(public router: Router, private usuarioService:UsuariosDetailsService) { }
   idUsuarioCliente:any;
@@ -30,7 +30,7 @@ export class MenuEsteticoComponent implements OnInit {
   }
   modificar(id:any){
     sessionStorage.setItem("idReserva",id);
-    this.router.navigate(['menuUpdateReserva']);
+    this.router.navigate(['menuGerenteUpdateReservas']);
   }
   eliminar(id:any){
     this.usuarioService.deleteReserva(id).subscribe(

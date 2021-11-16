@@ -26,6 +26,9 @@ import { MenuListaProductosComponent } from './pages/menu-lista-productos/menu-l
 import { MenuAddProductoComponent } from './pages/menu-add-producto/menu-add-producto.component';
 import { MenuListaEmpleadosComponent } from './pages/menu-lista-empleados/menu-lista-empleados.component';
 import { MenuModificarEmpleadoComponent } from './pages/menu-modificar-empleado/menu-modificar-empleado.component';
+import { MenuUpdateReservaComponent } from './pages/menu-update-reserva/menu-update-reserva.component';
+import { GerenteListaReservasComponent } from './pages/gerente-lista-reservas/gerente-lista-reservas.component';
+import { GerenteUpdateReservaComponent } from './pages/gerente-update-reserva/gerente-update-reserva.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +52,10 @@ import { MenuModificarEmpleadoComponent } from './pages/menu-modificar-empleado/
     MenuListaProductosComponent,
     MenuAddProductoComponent,
     MenuListaEmpleadosComponent,
-    MenuModificarEmpleadoComponent
+    MenuModificarEmpleadoComponent,
+    MenuUpdateReservaComponent,
+    GerenteListaReservasComponent,
+    GerenteUpdateReservaComponent
   ],
   imports: [
     BrowserModule,

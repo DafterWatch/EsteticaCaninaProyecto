@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MenuUpdateReservaComponent } from './pages/menu-update-reserva/menu-update-reserva.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
@@ -18,6 +19,8 @@ import { MenuRegistrarEmpleadosComponent } from './pages/menu-registrar-empleado
 import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu-registro-mascota.component';
 import { MenuReservaClienteComponent } from './pages/menu-reserva-cliente/menu-reserva-cliente.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { GerenteListaReservasComponent } from './pages/gerente-lista-reservas/gerente-lista-reservas.component';
+import { GerenteUpdateReservaComponent } from './pages/gerente-update-reserva/gerente-update-reserva.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -39,6 +42,9 @@ const routes: Routes = [
   {path:'menuAddProducto',component:MenuAddProductoComponent},
   {path:'menuListaEmpleados',component:MenuListaEmpleadosComponent},
   {path:'menuUpdateEmpleado',component:MenuModificarEmpleadoComponent},
+  {path:'menuUpdateReserva',component:MenuUpdateReservaComponent},
+  {path:'menuGerenteReservas',component:GerenteListaReservasComponent},
+  {path:'menuGerenteUpdateReservas',component:GerenteUpdateReservaComponent},
 ];
 
 @NgModule({

@@ -69,6 +69,15 @@ export class UsuariosDetailsService {
   editEmpleado(id:string, equipo:EmpleadosUpdate){
     return this.http.put(this.url+'/modificarEmpleado/'+id, equipo);
   }
+  deleteReserva(id:string){
+    return this.http.delete(this.url+'/deleteReserva/'+id);
+  }
+  getUnReserva(id:string){
+    return this.http.get(this.url+'/getUnReserva/'+id);
+  }
+  editReserva(id:string, equipo:ReservaRegistro){
+    return this.http.put(this.url+'/modificarReserva/'+id, equipo);
+  }
 }
 export interface UsuarioLogin{
   correo:string;

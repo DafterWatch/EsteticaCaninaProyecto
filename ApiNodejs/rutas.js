@@ -184,7 +184,7 @@ router.post('/addProducto',(req, res)=>{
         }
     })
 });
-//eliminar equipo
+//eliminar producto
 router.delete('/deleteProducto/:id',(req, res)=>{
     const {id}=req.params
     let sql = `delete from productos where idProducto = '${id}'`
@@ -246,6 +246,46 @@ router.put('/modificarEmpleado/:id',(req, res)=>{
         if(err) throw err
         else {
             res.json({status: 'productos modificado'});
+        }
+    })
+});
+//delete Reserva
+router.delete('/deleteReserva/:id',(req, res)=>{
+    const {id}=req.params
+    let sql = `delete from reservas where idReserva = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'reserva eliminado'});
+        }
+    })
+});
+//buscar 1 Reserva
+router.get('/getUnReserva/:id',(req, res)=>{
+    const {id}=req.params
+    let sql = `select * from reservas where idReserva = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json(rows[0]);
+        }
+    })
+});
+//modificar reserva
+router.put('/modificarReserva/:id',(req, res)=>{
+    const {id}=req.params
+    const {idUsuario, idMascota, idServicio, fecha, hora} = req.body
+    let sql = `update reservas 
+    set idUsuario = '${idUsuario}',
+    idMascota = '${idMascota}',
+    idServicio = '${idServicio}',
+    fecha = '${fecha}',
+    hora = '${hora}'
+    where idReserva = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'reserva modificado'});
         }
     })
 });
