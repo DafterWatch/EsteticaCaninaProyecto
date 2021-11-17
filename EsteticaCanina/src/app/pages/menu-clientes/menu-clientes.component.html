@@ -1,12 +1,52 @@
+
+<style>
+  #principal{
+    width: 270px; 
+           height: 210px;; 
+           margin-left: 50px;
+           margin-right: 10px;
+           display: inline-block;
+           margin-top: 50px;
+           padding: 10px;
+           border: 5px solid rgb(57, 128, 209);
+           border-radius: 15px;
+           box-shadow: rgb(130, 218, 229) 5px 10px 15px;
+           background: -webkit-radial-gradient(center, circle, rgb(79, 173, 236), rgb(128, 215, 241));
+           text-align: center;
+
+ } 
+
+  #titulo{
+      font: bold 30px ,Harlow Solid Italic;
+      text-shadow: rgb(145, 232, 235) 8px 4px 5px;
+      text-align: center;
+  }
+</style>
 <div class="container">
-    <h1>Bienvenido <span style="color: blue;">{{nombreUsuario}}</span></h1>
-    <h1>Menu</h1>
+    <h1 id="titulo">Bienvenido <span style="color: rgb(23, 111, 161);">{{nombreUsuario}}</span></h1>
     <br>
-    <div>
-      <button class="btn btn-lg btn-primary" style="display:flex;" (click)="registrarNuevaMascota()">Registrar Mascotas</button>
+    <div class="contenedor">
+    <div id="principal">
+      <p><img src="assets/Images/registro.jpg" width="220px" height="180px" ></p> 
+      <button id="butt" class="btn btn-lg btn-primary" style="display:flex;" style="text-align: center;" (click)="registrarNuevaMascota()">Registrar Mascotas</button>
+    </div>
       <br>
-      <button class="btn btn-lg btn-primary" style="display:flex;" routerLink="/menuReservaCliente">Ver Reservas</button>
+
+      <div id="principal">
+        <p><img src="assets/Images/IconoReservacion.png" width="220px" height="180px" ></p> 
+        <button id="butt" class="btn btn-lg btn-primary" style="display:flex;" style="text-align: center;" routerLink="/menuReservaCliente">Ver Reservas</button>
+      </div>
+      
       <br>
-      <button class="btn btn-lg btn-primary" style="display:flex;" routerLink="/menulistaMascotas">Realizar Reserva</button>
-    </div>      
+      <div id="principal">
+        <p><img src="assets/Images/realizarReserva.jpg" width="220px" height="180px" ></p> 
+        <button id="butt" class="btn btn-lg btn-primary" style="display:flex;" style="text-align: center;" routerLink="/menulistaMascotas">Realizar Reserva</button>
+      </div>
+    </div>  
+    <br><br><br><br><br><br><br>  
 </div>
+
+
+
+
+
