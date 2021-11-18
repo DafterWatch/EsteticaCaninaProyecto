@@ -125,6 +125,7 @@ export interface ReservasLista{
   idMascota:string;
   nombreMascota:string;
   idServicio:string; 
+  precio:number;
   nombre:string; 
   fecha:string; 
   hora:string;
@@ -185,6 +186,7 @@ export interface ServiciosRealizadosLista{
   idServicioRealizado: string;
   idServicio: string;
   nombre: string;
+  precio:number;
   fecha: string;
   idUsuario: string;
   nombreUsuario: string;

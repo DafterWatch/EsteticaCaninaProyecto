@@ -20,6 +20,7 @@ export class MenuEmpleadosComponent implements OnInit {
     idMascota: '',
     nombreMascota: '',
     idServicio: '',
+    precio:0,
     nombre: '',
     fecha: '',
     hora: ''

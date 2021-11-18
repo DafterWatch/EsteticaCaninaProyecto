@@ -9,6 +9,7 @@
           <tr style="color: blue;">
             <th scope="col">Id</th>
             <th scope="col">Nombre Servicio</th>
+             <th scope="col">Precio</th>
             <th scope="col">Fecha</th>
             <th scope="col">Nombre Usuario</th>
             <th scope="col">Descripción</th>
@@ -18,6 +19,7 @@
           <tr *ngFor="let serv of serviciosRealizadosLista">
             <th>{{serv.idServicioRealizado}}</th>
             <td>{{serv.nombre}}</td>
+            <td>{{serv.precio}}</td>
             <td>{{serv.fecha}}</td>
             <td>{{serv.nombreUsuario}}</td>
             <td>{{serv.descripcion}}</td>

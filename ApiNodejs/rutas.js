@@ -50,7 +50,7 @@ router.get('/getMascotas/:id',(req, res)=>{
 //get reservas
 router.get('/getReservas/:id',(req, res)=>{
     const {id} = req.params
-    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre, r.fecha, r.hora from 
+    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre, s.precio,r.fecha, r.hora from 
 	((reservas r inner join servicios s on r.idServicio = s.idServicio)
     inner join usuarios u on r.idUsuario = u.idUsuario)
     inner join mascotas m on r.idMascota = m.idMascota
@@ -120,7 +120,7 @@ router.put('/modificarProductos/:id',(req, res)=>{
 });
 //get reservas all
 router.get('/getReservasAll/',(req, res)=>{
-    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre, r.fecha, r.hora from 
+    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre,s.precio, r.fecha, r.hora from 
 	((reservas r inner join servicios s on r.idServicio = s.idServicio)
     inner join usuarios u on r.idUsuario = u.idUsuario)
     inner join mascotas m on r.idMascota = m.idMascota
@@ -135,7 +135,7 @@ router.get('/getReservasAll/',(req, res)=>{
 //get reservas
 router.get('/getReservasHistorial/:id',(req, res)=>{
     const {id} = req.params
-    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre, r.fecha, r.hora from 
+    let sql = `select r.idReserva, r.idUsuario, u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre,s.precio, r.fecha, r.hora from 
 	((reservas r inner join servicios s on r.idServicio = s.idServicio)
     inner join usuarios u on r.idUsuario = u.idUsuario)
     inner join mascotas m on r.idMascota = m.idMascota
@@ -291,7 +291,7 @@ router.put('/modificarReserva/:id',(req, res)=>{
 });
 // get servicios realizados
 router.get('/getServiciosRealizados/',(req, res)=>{
-    let sql = `select s.idServicioRealizado, s.idServicio, ser.nombre ,fecha, s.idUsuario, nombreUsuario, idHistorial, descripcion from 
+    let sql = `select s.idServicioRealizado, s.idServicio, ser.nombre ,ser.precio,fecha, s.idUsuario, nombreUsuario, idHistorial, descripcion from 
     ((serviciosrealizados s inner join historial h 
     on s.idServicioRealizado = h.idServicioRealizado)
     inner join servicios ser on s.idServicio = ser.idServicio)
