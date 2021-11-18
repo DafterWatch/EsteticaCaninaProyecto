@@ -14,7 +14,7 @@
             <input type="date" class="form-control mt-2 mb-2" [(ngModel)]="fecha" name="fecha">
             <br>
             <h2>Hora</h2>
-            <input type="time" class="form-control" [(ngModel)]="hora" name="hora">
+            <input type="time" class="form-control" [(ngModel)]="hora" name="hora" min="08:30" max="18:00">
             <br>
             <p><span><b>Servicio:</b></span> {{servicioNombre}}</p>
             <p><span><b>Fecha:</b></span> {{fecha}}</p>
