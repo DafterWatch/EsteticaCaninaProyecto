@@ -81,6 +81,15 @@ export class UsuariosDetailsService {
   getServiciosRealizados(id:string){
     return this.http.get(this.url+'/getServiciosRealizados/'+id);
   }
+  buscarHistorial(id:String){
+    return this.http.get(this.url+'/getbuscarHistorial/'+id)
+  }
+  editHistorial(id:string, equipo:ServiciosRealizadosLista){
+    return this.http.put(this.url+'/modificarHistorial/'+id, equipo);
+  }
+  editProductos(id:string, equipo:ProductoRegistro){
+    return this.http.put(this.url+'/modificarTodoProductos/'+id, equipo);
+  }
 }
 export interface UsuarioLogin{
   correo:string;
@@ -190,6 +199,22 @@ export interface ServiciosRealizadosLista{
   fecha: string;
   idUsuario: string;
   nombreUsuario: string;
+  idHistorial: string;
+  descripcion: string;
+}
+export interface HistorialGerente{
+  idUsuario: string;
+  idHistorial: string;
+  idServicioRealizado: string;
+  idServicio: string;
+  nombre: string;
+  fecha: string;
+  nombreUsuario: string;
+  descripcion: string;
+  idMascota: string;
+  nombreMascota: string;
+}
+export interface HistorialUpdate{
   idHistorial: string;
   descripcion: string;
 }

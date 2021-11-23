@@ -11,6 +11,9 @@ import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.compo
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
 import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
+
+import { MenuGerenteHistorialComponent } from './pages/menu-gerente-historial/menu-gerente-historial.component';
+
 import { MenuListaEmpleadosComponent } from './pages/menu-lista-empleados/menu-lista-empleados.component';
 import { MenuListaMascotasComponent } from './pages/menu-lista-mascotas/menu-lista-mascotas.component';
 import { MenuListaProductosComponent } from './pages/menu-lista-productos/menu-lista-productos.component';
@@ -34,6 +37,9 @@ const routes: Routes = [
   {path:'menuCajero',component:MenuEmpleadosComponent},
   {path:'menuEstetico',component:MenuEsteticoComponent},
   {path:'menuGerente',component:MenuGerenteComponent},
+
+  {path:'menuHistorial',component:MenuGerenteHistorialComponent},
+
   {path:'menuRegistroMascota',component:MenuRegistroMascotaComponent},
   {path:'menuReservaCliente',component:MenuReservaClienteComponent},
   {path:'formuReserva',component:FormularioReservaComponent},

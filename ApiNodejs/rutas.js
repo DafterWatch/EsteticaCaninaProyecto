@@ -172,6 +172,50 @@ router.post('/addHistorial',(req, res)=>{
         }
     })
 });
+
+
+
+//get reservasHistorial
+router.get('/getbuscarHistorial/:id',(req, res)=>{
+    const {id} = req.params
+    let sql = `
+    select r.idUsuario, r.idReserva,  u.nombreUsuario, r.idMascota, m.nombreMascota, r.idServicio, s.nombre, r.fecha, r.hora, h.descripcion from 
+	((reservas r inner join servicios s on r.idServicio = s.idServicio)
+    inner join historial h on r.idUsuario = h.idUsuario
+    inner join usuarios u on r.idUsuario = u.idUsuario)
+    inner join mascotas m on r.idMascota = m.idMascota
+    where m.nombreMascota = ?
+    
+    order by r.fecha desc`
+    conexion.query(sql,[id], (err, rows, fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows[0]);
+        }
+    });
+});
+
+
+//modificar historial
+router.put('/modificarHistorial/:id',(req, res)=>{
+    const {id}=req.params
+    const {descripcion} = req.body
+    let sql = `update historial set descripcion = ${descripcion} where idHistorial = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'historial modificado'});
+        }
+    })
+});
+
+
+
+
+
+
+
+
 //agregar producto
 router.post('/addProducto',(req, res)=>{
     const {nombreProducto, cantidad, precio} = req.body

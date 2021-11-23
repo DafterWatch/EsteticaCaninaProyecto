@@ -17,6 +17,7 @@ import { MenuClientesComponent } from './pages/menu-clientes/menu-clientes.compo
 import { MenuEmpleadosComponent } from './pages/menu-empleados/menu-empleados.component';
 import { MenuGerenteComponent } from './pages/menu-gerente/menu-gerente.component';
 import { MenuEsteticoComponent } from './pages/menu-estetico/menu-estetico.component';
+
 import { MenuRegistroMascotaComponent } from './pages/menu-registro-mascota/menu-registro-mascota.component';
 import { MenuReservaClienteComponent } from './pages/menu-reserva-cliente/menu-reserva-cliente.component';
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
@@ -30,6 +31,7 @@ import { MenuUpdateReservaComponent } from './pages/menu-update-reserva/menu-upd
 import { GerenteListaReservasComponent } from './pages/gerente-lista-reservas/gerente-lista-reservas.component';
 import { GerenteUpdateReservaComponent } from './pages/gerente-update-reserva/gerente-update-reserva.component';
 import { MenuListaServiciosRealizadosComponent } from './pages/menu-lista-servicios-realizados/menu-lista-servicios-realizados.component';
+import { MenuGerenteHistorialComponent } from './pages/menu-gerente-historial/menu-gerente-historial.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,8 @@ import { MenuListaServiciosRealizadosComponent } from './pages/menu-lista-servic
     MenuUpdateReservaComponent,
     GerenteListaReservasComponent,
     GerenteUpdateReservaComponent,
-    MenuListaServiciosRealizadosComponent
+    MenuListaServiciosRealizadosComponent,
+    MenuGerenteHistorialComponent
   ],
   imports: [
     BrowserModule,
