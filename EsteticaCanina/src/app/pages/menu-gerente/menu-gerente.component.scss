@@ -24,3 +24,12 @@ margin: auto 0;
     padding: 1rem;
 
 }
+@media (max-width: 991.98px) {
+    .contenedor{
+        
+        display:inline-block;
+    }
+    #principal{
+        margin-top: 1rem;
+    }
+}
