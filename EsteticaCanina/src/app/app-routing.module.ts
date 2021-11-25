@@ -25,6 +25,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { GerenteListaReservasComponent } from './pages/gerente-lista-reservas/gerente-lista-reservas.component';
 import { GerenteUpdateReservaComponent } from './pages/gerente-update-reserva/gerente-update-reserva.component';
 import { MenuListaServiciosRealizadosComponent } from './pages/menu-lista-servicios-realizados/menu-lista-servicios-realizados.component';
+import { MenuListaClientesComponent } from './pages/menu-lista-clientes/menu-lista-clientes.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -53,6 +54,7 @@ const routes: Routes = [
   {path:'menuGerenteReservas',component:GerenteListaReservasComponent},
   {path:'menuGerenteUpdateReservas',component:GerenteUpdateReservaComponent},
   {path:'menuListaServiciosRealizados',component:MenuListaServiciosRealizadosComponent},
+  {path:'menuListaClientes',component:MenuListaClientesComponent},
 ];
 
 @NgModule({

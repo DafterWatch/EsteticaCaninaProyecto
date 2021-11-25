@@ -60,6 +60,9 @@ export class UsuariosDetailsService {
   getEmpleadosLista(id:string){
     return this.http.get(this.url+'/getEmpleados/'+id);
   }
+  getClientesLista(id:string){
+    return this.http.get(this.url+'/getClientesLista/'+id);
+  }
   deleteEmpleado(id:string){
     return this.http.delete(this.url+'/deleteEmpleado/'+id);
   }
@@ -68,6 +71,9 @@ export class UsuariosDetailsService {
   }
   editEmpleado(id:string, equipo:EmpleadosUpdate){
     return this.http.put(this.url+'/modificarEmpleado/'+id, equipo);
+  }
+  editCliente(id:string, equipo:any){
+    return this.http.put(this.url+'/modificarCliente/'+id, equipo);
   }
   deleteReserva(id:string){
     return this.http.delete(this.url+'/deleteReserva/'+id);
@@ -183,6 +189,15 @@ export interface EmpleadosLista{
   contra: string;
   idCargo: string;
   nombre: string;
+}
+export interface ClientesLista{
+  idUsuario: string;
+  nombreUsuario: string;
+  telefono: string;
+  correo: string;  
+  idCargo: string;
+  contra: string;
+  estado: string;
 }
 export interface EmpleadosUpdate{
   nombreUsuario: string;

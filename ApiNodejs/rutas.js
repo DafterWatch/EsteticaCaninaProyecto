@@ -347,6 +347,31 @@ router.get('/getServiciosRealizados/',(req, res)=>{
         }
     });
 });
+
+// get clientes
+router.get('/getClientesLista/',(req, res)=>{
+    let sql = `select * from usuarios where cargoId = '1'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err;
+        else{
+            res.json(rows);
+        }
+    });
+});
+//modificar cliente
+router.put('/modificarCliente/:id',(req, res)=>{
+    const {id}=req.params
+    const {estado} = req.body
+    let sql = `update usuarios 
+    set estado = '${estado}'
+    where idUsuario = '${id}'`
+    conexion.query(sql, (err, rows, fields)=>{
+        if(err) throw err
+        else {
+            res.json({status: 'productos modificado'});
+        }
+    })
+});
 //--------------------
 
 module.exports = router;
